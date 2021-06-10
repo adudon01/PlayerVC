@@ -10,11 +10,11 @@ RUN python -m pip install --upgrade pip
 RUN python -m pip install wheel Pyrogram TgCrypto
 RUN python -m pip install pytgcalls ffmpeg-python psutil
 
-RUN wget -q https://github.com/callsmusic/tgvc-userbot/archive/dev.tar.gz && \
+RUN wget -q https://github.com/ramadhani892/tgvcallbot/archive/dev.tar.gz && \
     tar xf dev.tar.gz && rm dev.tar.gz
 
-WORKDIR /tgvc-userbot-dev
+WORKDIR /tgvcallbot-dev
 CMD python3 main.py
 
 # docker build -t tgcalls .
-# docker run -it --rm --env-file ./envfile --name tgvc-userbot tgcalls
+# docker run -it --rm --env-file ./envfile --name tgvcallbot tgcalls
