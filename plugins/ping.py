@@ -57,7 +57,7 @@ async def _human_time_duration(seconds):
                    & self_or_contact_filter
                    & ~filters.edited
                    & ~filters.via_bot
-                   & filters.regex("^!ping$"))
+                   & filters.regex("^!!ping$"))
 async def ping_pong(_, m: Message):
     """Reply ping with pong and delete both messages"""
     start = time()
