@@ -57,14 +57,14 @@ async def _human_time_duration(seconds):
                    & self_or_contact_filter
                    & ~filters.edited
                    & ~filters.via_bot
-                   & filters.regex("^!!ping$"))
+                   & filters.regex("^,.ping$"))
 async def ping_pong(_, m: Message):
     """Reply ping with pong and delete both messages"""
     start = time()
     m_reply = await m.reply_text("...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        f"{emoji.ROBOT} ping: `{delta_ping * 1000:.3f} ms`"
+        f"{emoji.ROBOT} NGENTOT: `{delta_ping * 1000:.3f} ms`"
     )
 
 
